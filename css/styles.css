@@ -394,6 +394,19 @@ img {
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--ind-hero-btn-hover-bcg-col);
+  animation: btn-animation 250ms var(--timing-function);
+}
+
+@keyframes btn-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* modal form for hero button */
@@ -408,13 +421,79 @@ img {
 
   opacity: 1;
   transition: opacity 250ms var(--timing-function);
+  animation: backdrop-animation 250ms;
+}
+
+@keyframes backdrop-in-animation {
+  0% {
+    transform: opacity(0);
+    transform: scale(0);
+  }
+  10% {
+    transform: opacity(0.1);
+    transform: scale(0.1);
+  }
+
+  25% {
+    transform: opacity(0.25);
+    transform: scale(0.25);
+  }
+  50% {
+    transform: opacity(0.5);
+    transform: scale(0.5);
+  }
+  75% {
+    transform: opacity(0.75);
+    transform: scale(0.75);
+  }
+  90% {
+    transform: opacity(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    transform: opacity(1);
+    transform: scale(1);
+  }
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  /* animation: backdrop-out-animation 2500ms; */
 }
+
+/* @keyframes backdrop-out-animation {
+  0% {
+    transform: opacity(1);
+    transform: scale(1);
+  }
+  10% {
+    transform: opacity(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    transform: opacity(0.75);
+    transform: scale(0.75);
+  }
+  50% {
+    transform: opacity(0.5);
+    transform: scale(0.5);
+  }
+  75% {
+    transform: opacity(0.25);
+    transform: scale(0.25);
+  }
+  90% {
+    transform: opacity(0.1);
+    transform: scale(0.1);
+  }
+  100% {
+    transform: opacity(0);
+    transform: scale(0);
+  }
+} */
 
 .modal-wrapper {
   position: absolute;
@@ -424,7 +503,7 @@ img {
   width: 528px;
   height: 581px;
 
-  transition: transform 2500ms var(--timing-function), box-shadow 2500ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
