@@ -420,7 +420,7 @@ img {
   z-index: 10;
 
   opacity: 1;
-  transition: opacity 700ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function);
   /* animation: backdrop-in-animation 1000ms; */
 }
 
@@ -458,8 +458,6 @@ img {
 
 .backdrop.is-hidden {
   opacity: 0;
-  scale: 0.5;
-  visibility: hidden;
   pointer-events: none;
   /* animation: backdrop-out-animation 2500ms; */
 }
@@ -505,7 +503,6 @@ img {
   height: 581px;
 
   opacity: 1;
-  transform: scale: 1;
 
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -513,7 +510,7 @@ img {
 
   background-color: var(--main-bcg-color);
 
-  transition: transform 750ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
 }
 
 /* .backdrop.is-hidden .modal-wrapper {
